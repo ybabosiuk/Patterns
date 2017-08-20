@@ -2,26 +2,26 @@
 
 import UIKit
 
-protocol IStrategy {
+protocol StrategyProtocol {
     func Algoritm()
 }
 
-class ConcreteAlgoritm1: IStrategy {
+class ConcreteAlgoritm1: StrategyProtocol {
     func Algoritm() {
         print("Algoritm1")
     }
 }
 
-class ConcreteAlgoritm2: IStrategy {
+class ConcreteAlgoritm2: StrategyProtocol {
     func Algoritm() {
         print("Algoritm2")
     }
 }
 
 class Context {
-    private var contextStrategy: IStrategy
+    private var contextStrategy: StrategyProtocol
     
-    init(strategy: IStrategy) {
+    init(strategy: StrategyProtocol) {
         self.contextStrategy = strategy
     }
     
